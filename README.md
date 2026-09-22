@@ -1,1 +1,1 @@
-I am adding or creating a Google ads for my business IT and Web Solution
+adding or creating a Google ads for my business IT and Web Solution
