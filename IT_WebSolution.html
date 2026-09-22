@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechSmart IT & Web Solutions</title>
+
+    <meta name="description"
+          content="TechSmart provides professional IT solutions, web development services and career-focused technology courses.">
+
+    <style>
+        /* =========================
+           RESET & GLOBAL STYLES
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* html {
+            scroll-behavior: smooth;
+        } */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: #2563eb;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin: 10px 0;
+            color: #0f172a;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+            color: black;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 24px 0px;
+            padding: 14px 26px;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-weight: bold;
+            border: 2px solid #2563eb;
+            transition: 0.3s;
+            /*cursor: pointer;*/
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            border-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color:blue;
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            color: white;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.96);
+            box-shadow: 2px 2px 2px 2px rgba(10,10,10,0.06);
+            /* border-bottom: 2px solid gray; */
+            z-index: 1000;
+        }
+
+        .navbar {
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            /* font-size: 25px;
+            font-weight: 300; */
+            line-height: 2px;
+            color: #0f172a;
+        }
+
+        .logo img {
+            /* color: #2563eb; */
+            width:70%;
+            position:relative;
+            height:auto;
+        }
+        .logo span.subtitle{
+            color: black;
+            position:absolute;
+            top:75px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size:10px;
+            /* font-weight:5px; */
+            margin-left:1.1em;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            margin-left:10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-links a {
+            color:black;/*color: #334155;*/
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color:blue;/*color: #2563eb;*/
+        }
+
+        .menu-btn {
+            /*display: none;*/
+            /*font-size: 20px;
+            font-weight:600px;
+            /*cursor: pointer;
+            color: #0f172a;*/
+            /* background: #172554; */
+            /* background-color: blue; */
+            background-color: #2563eb;
+            color: white;
+            margin-left:60px;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            
+            display: flex;
+            align-items: center;
+            /* padding-top: 75px;
+            margin-top: 15px; */
+            min-height:100vh;
+            background-color:lightgray;
+            background-image: url("images/person-using-laptop-with-it-solutions-icon-hovering-above-hand.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            box-shadow: 5px 5px 5px 4px rgba(128,128,128,0.6);
+                /* radial-gradient(circle at 80% 30%, rgba(37,99,235,0.15), transparent 30%),
+                linear-gradient(135deg, #f8fbff, #eef5ff); */
+        }
+
+        /* .hero-content {
+            /* display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center; */
+            /* min-height: 550px; */
+            /* background-image: url("images/person-using-laptop-with-it-solutions-icon-hovering-above-hand.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            box-shadow: 5px 5px 5px 4px rgba(128,128,128,0.6); 
+        } */
+
+        .hero-text h1 {
+            font-size: 65px;
+            line-height: 1.1;
+            color: #0f172a;
+            margin: 10px 0 20px;
+        }
+
+        .hero-text h1 span {
+            color: #2563eb;
+        }
+
+        .hero-text p {
+            color: blue;
+            font-size: 25px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+        .hero-text a {
+            font-size: 15px;
+            margin-bottom:10px;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1d4ed8;
+            margin-top:20px;
+            padding: 8px 14px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        /* .hero-card {
+            background: blue;
+            border-radius: 25px;
+            padding: 25px;
+            box-shadow: 30px 40px rgba(37,99,235,0.15);
+
+        }
+
+        .code-window {
+            background: #0f172a;
+            border-radius: 15px;
+            padding: 25px;
+            color: #93c5fd;
+            font-family: monospace;
+            min-height: 300px;
+        } */
+
+        .dots {
+            display: flex;
+            gap: 7px;
+            margin-bottom: 25px;
+        }
+
+        .dots i {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #ef4444;
+        }
+
+        .dots i:nth-child(2) {
+            background: #f59e0b;
+        }
+
+        .dots i:nth-child(3) {
+            background: #22c55e;
+        }
+
+        .code-line {
+            margin: 12px 0;
+        }
+
+        .code-blue {
+            color: #60a5fa;
+        }
+
+        .code-green {
+            color: #4ade80;
+        }
+
+        .code-yellow {
+            color: #facc15;
+        }
+
+        .floating-card {
+            position: absolute;
+            right: 100px;
+            top: 120px;
+            background: white;
+            padding: 15px 22px;
+            border-radius: 14px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .floating-card strong {
+            display: block;
+            color: blue;
+            font-size: 25px;
+        }
+        .floating-card span {
+            color: blue;
+            font-size: 20px;
+        }
+
+        /* =========================
+           STATS
+        ========================== */
+
+        .stats {
+            background-color: black;
+            /* height:15vh; */
+            /* padding: 20px 0px; */
+            /* color: white; */
+            /* padding:10px 0px; */
+        }
+
+        .stats-grid {
+            display: flex;
+            margin:20px 0px 20px;
+            padding: 20px 0px;
+            /* grid-template-columns: repeat(4, 1fr); */
+            text-align: center;
+        }
+        .stat{
+            width:30%;
+        }
+        .stat h3 {
+            font-size: 32px;
+            color: #60a5fa;
+        }
+
+        .stat p {
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           COURSES
+        ========================== */
+
+        .courses {
+            background: #f8fafc;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(15,23,42,0.1);
+        }
+
+        .course-top {
+            padding: 30px;
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            color: white;
+        }
+
+        .course-icon {
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.2);
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .course-top h3 {
+            font-size: 23px;
+        }
+
+        .course-body {
+            padding: 25px 30px;
+        }
+
+        .course-body p {
+            color: #64748b;
+            margin-bottom: 18px;
+        }
+
+        .course-body li {
+            margin: 9px 0;
+            color: #475569;
+        }
+
+        .course-body li::before {
+            content: "✓";
+            color: #22c55e;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 30px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .price {
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            padding: 35px;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: #93c5fd;
+            box-shadow: 0 15px 35px rgba(37,99,235,0.1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            display: grid;
+            place-items: center;
+            background: #dbeafe;
+            color: #2563eb;
+            border-radius: 12px;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .service-card p {
+            color: #64748b;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: #f8fafc;
+            margin-top: -50px;
+        }
+
+        .about-grid {
+            display: grid;
+            /* grid-template-columns: 1fr 1fr; */
+            grid-template-columns: repeat(2, 1fr);
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-box {
+            background: #0f172a;
+            color: white;
+            padding: 45px;
+            border-radius: 20px;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        /* .about-box::after {
+            content: "";
+            width: 180px;
+            height: 180px;
+            background: #2563eb;
+            border-radius: 50%;
+            position: absolute;
+            right: -70px;
+            bottom: -100px;
+            opacity: 0.5;
+        } */
+
+        .about-box h3 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+            margin: 10px 0 20px;
+        }
+
+        .about-text p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .check-list li {
+            margin: 14px 0;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #2563eb;
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           TESTIMONIALS
+        ========================== */
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .testimonial {
+            padding: 30px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+        }
+
+        .stars {
+            color: #f59e0b;
+            margin-bottom: 15px;
+        }
+
+        .testimonial p {
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #dbeafe;
+            display: grid;
+            place-items: center;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .user strong {
+            display: block;
+        }
+
+        .user small {
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           PRICING
+        ========================== */
+
+        .pricing {
+            background: #f8fafc;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .price-card {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .price-card.featured {
+            border: 2px solid #2563eb;
+            transform: scale(1.03);
+            position: relative;
+        }
+
+        .popular {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2563eb;
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .price-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .big-price {
+            font-size: 42px;
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .price-card li {
+            padding: 10px 0;
+            color: #64748b;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .price-card .btn {
+            margin-top: 25px;
+            width: 100%;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+        .section{
+            background-color: lightgray;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 38px;
+            margin: 10px 0 20px;
+        }
+
+        .contact-info > p {
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .contact-icon {
+            min-width: 45px;
+            height: 45px;
+            display: grid;
+            place-items: center;
+            background: #dbeafe;
+            color: #2563eb;
+            border-radius: 10px;
+        }
+
+        .contact-item strong {
+            display: block;
+        }
+
+        .contact-item span {
+            color: #64748b;
+        }
+
+        .contact-form {
+            padding: 30px;
+            background: #f8fafc;
+            border:1px solid gray;
+            border-radius: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 15px;
+            outline: none;
+            font-family: inherit;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #2563eb;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form .btn {
+            width: 100%;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #0f172a;
+            color: white;
+            padding-top: 65px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 35px;
+        }
+        .footer-grid .contact-item{
+            margin: 15px 0px;
+        }
+        
+        .footer-logo {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo span {
+            color: #60a5fa;
+        }
+
+        footer p {
+            color: #94a3b8;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+        }
+
+        .footer-col li {
+            margin: 10px 0;
+            color: #94a3b8;
+        }
+
+        .footer-col a:hover {
+            color: #60a5fa;
+        }
+
+        .copyright {
+            border-top: 1px solid #1e293b;
+            padding: 20px 0;
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .hero-content,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-image {
+                max-width: 600px;
+                margin: auto;
+            }
+
+            .course-grid,
+            .service-grid,
+            .testimonial-grid,
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                gap: 0;
+                padding: 10px 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 13px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .course-grid,
+            .service-grid,
+            .testimonial-grid,
+            .pricing-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price-card.featured {
+                transform: none;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .hero-card {
+                padding: 20px;
+            }
+
+            .floating-card {
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+        <div class="container navbar">
+
+            <a href="#" class="logo">
+                <!-- Tech<span>Smart</span> -->
+                <img src="images/tech-smart.jfif" alt="Web Development">
+                <br>
+                <span class="subtitle"><i>affiliated to Neilit</i></span>
+                </img>
+            </a>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>&nbsp;&nbsp;
+                    <li><a href="#courses">Courses</a></li>&nbsp;&nbsp;
+                    <li><a href="#services">Services</a></li>&nbsp;&nbsp;
+                    <li><a href="#about">About</a></li>&nbsp;&nbsp;
+                    <li><a href="#pricing">Pricing</a></li>&nbsp;&nbsp;
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-btn" id="menuBtn">
+                <a href="#courses">Explore Courses</a><!--☰-->
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+
+            <div class="hero-text">
+                <div class="hero-badge">
+                    🚀 Learn. Build. Grow.
+                </div>
+
+                <h1>
+                    Build Your Future With
+                    <span>Technology</span>
+                </h1>
+
+                <p>
+                    Master modern IT skills, learn web development,
+                    build professional websites and grow your digital
+                    career with TechSmart.
+                </p>
+
+                <a href="#courses" class="btn">
+                    Explore Courses
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Us
+                </a>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <div class="hero-card">
+
+                    <div class="code-window">
+                        <!--
+                        <div class="dots">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="code-line">
+                            <span class="code-blue">const</span>
+                            future =
+                            <span class="code-yellow">"technology"</span>;
+                        </div>
+
+                        <div class="code-line">
+                            <span class="code-blue">function</span>
+                            <span class="code-green">buildSkills</span>() {
+                        </div>
+
+                        <div class="code-line">
+                            &nbsp;&nbsp;learn(
+                            <span class="code-yellow">"HTML"</span>);
+                        </div>
+
+                        <div class="code-line">
+                            &nbsp;&nbsp;learn(
+                            <span class="code-yellow">"CSS"</span>);
+                        </div>
+
+                        <div class="code-line">
+                            &nbsp;&nbsp;learn(
+                            <span class="code-yellow">"JavaScript"</span>);
+                        </div>
+
+                        <div class="code-line">
+                            &nbsp;&nbsp;return
+                            <span class="code-green">success</span>;
+                        </div>
+
+                        <div class="code-line">
+                            }
+                        </div>
+                        -->
+                        <!--img src="images/tech-solutions.jfif" alt="Web Development"/-->
+                    </div>
+
+                </div>
+
+                <!--div class="floating-card">
+                    <strong>10K+</strong>
+                    <span>Students Trained</span>
+                </div-->
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         STATS
+    ========================== -->
+
+    <section class="stats">
+        <div class="container stats-grid">
+
+            <div class="stat">
+                <h3>10K+</h3>
+                <p>Students</p>
+            </div>
+
+            <div class="stat">
+                <h3>25+</h3>
+                <p>Courses</p>
+            </div>
+
+            <div class="stat">
+                <h3>50+</h3>
+                <p>Experts</p>
+            </div>
+
+            <div class="stat">
+                <h3>95%</h3>
+                <p>Success Rate</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         COURSES
+    ========================== -->
+
+    <section class="section courses" id="courses">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span>Our Courses</span>
+                <h2>Learn In-Demand IT Skills</h2>
+                <p>
+                    Practical courses designed for beginners,
+                    students, professionals and entrepreneurs.
+                </p>
+            </div>
+
+            <div class="course-grid">
+
+                <div class="course-card">
+
+                    <div class="course-top">
+                        <!--div class="course-icon">🌐</div-->
+                        <img src="images/web-dev.jfif" alt="Web Development"/>
+                        <h3>Web Development</h3>
+                    </div>
+
+                    <div class="course-body">
+                        <p>
+                            Learn how to create modern,
+                            responsive websites from scratch.
+                        </p>
+
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Responsive Design</li>
+                            <li>Real Projects</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-footer">
+                        <span class="price">₹9,999</span>
+                        <a href="#contact" class="btn">Enroll</a>
+                    </div>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <div class="course-top">
+                        <!--div class="course-icon">⚛️</div-->
+                        <img src="images/react-programming.jpg" alt="React Programming"/>
+                        <h3>React Development</h3>
+                    </div>
+
+                    <div class="course-body">
+                        <p>
+                            Build fast and modern web applications
+                            using React.
+                        </p>
+
+                        <ul>
+                            <li>React Fundamentals</li>
+                            <li>Components</li>
+                            <li>API Integration</li>
+                            <li>Projects</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-footer">
+                        <span class="price">₹14,999</span>
+                        <a href="#contact" class="btn">Enroll</a>
+                    </div>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <div class="course-top">
+                        <!--div class="course-icon">🐍</div-->
+                        <img src="images/python.jpg" alt="Python Programming"/>
+                        <h3>Python Programming</h3>
+                    </div>
+
+                    <div class="course-body">
+                        <p>
+                            Learn Python programming from beginner
+                            concepts to advanced development.
+                        </p>
+
+                        <ul>
+                            <li>Python Basics</li>
+                            <li>OOP</li>
+                            <li>Automation</li>
+                            <li>Projects</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-footer">
+                        <span class="price">₹11,999</span>
+                        <a href="#contact" class="btn">Enroll</a>
+                    </div>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <div class="course-top">
+                        <!--div class="course-icon">📊</div-->
+                        <img src="images/da.avif" title="Data Analytics"/>
+                        <h3>Data Analytics</h3>
+                    </div>
+
+                    <div class="course-body">
+                        <p>
+                            Turn data into useful business insights
+                            and make better decisions.
+                        </p>
+
+                        <ul>
+                            <li>Excel</li>
+                            <li>SQL</li>
+                            <li>Power BI</li>
+                            <li>Data Visualization</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-footer">
+                        <span class="price">₹12,999</span>
+                        <a href="#contact" class="btn">Enroll</a>
+                    </div>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <div class="course-top">
+                        <!--div class="course-icon">☁️</div-->
+                        <img src="images/cloud.jpg" title="Cloud Computing"/>
+                        <h3>Cloud Computing</h3>
+                    </div>
+
+                    <div class="course-body">
+                        <p>
+                            Understand cloud infrastructure and
+                            modern deployment technologies.
+                        </p>
+
+                        <ul>
+                            <li>Cloud Fundamentals</li>
+                            <li>AWS Basics</li>
+                            <li>Deployment</li>
+                            <li>Cloud Security</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-footer">
+                        <span class="price">₹15,999</span>
+                        <a href="#contact" class="btn">Enroll</a>
+                    </div>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <div class="course-top">
+                        <!--div class="course-icon">🔐</div-->
+                        <img src="images/cyber-security.jpg" title="Python Programming"/>
+                        <h3>Cyber Security</h3>
+                    </div>
+
+                    <div class="course-body">
+                        <p>
+                            Learn essential cybersecurity concepts,
+                            security practices and protection methods.
+                        </p>
+
+                        <ul>
+                            <li>Network Security</li>
+                            <li>Ethical Security</li>
+                            <li>Threat Detection</li>
+                            <li>Security Projects</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-footer">
+                        <span class="price">₹17,999</span>
+                        <a href="#contact" class="btn">Enroll</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section class="section" id="services">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span>Our Services</span>
+                <h2>Complete Digital Solutions</h2>
+                <p>
+                    From websites to business applications,
+                    we help businesses build their digital presence.
+                </p>
+            </div>
+
+            <div class="service-grid">
+
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Website Development</h3>
+                    <p>
+                        Professional, responsive and high-performance
+                        websites for businesses and individuals.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛒</div>
+                    <h3>E-Commerce Solutions</h3>
+                    <p>
+                        Build powerful online stores with modern
+                        shopping and payment features.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Web Applications</h3>
+                    <p>
+                        Custom web applications designed around
+                        your business requirements.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>
+                        Clean, modern and user-friendly interfaces
+                        that improve customer experience.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Digital Marketing</h3>
+                    <p>
+                        Improve your online visibility through
+                        SEO, social media and digital campaigns.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>IT Consulting</h3>
+                    <p>
+                        Technology consulting to help your business
+                        choose better digital solutions.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="section about" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-box">
+
+                <h3>Technology That Creates Opportunities</h3>
+
+                <p>
+                    We combine education, technology and creativity
+                    to help people and businesses succeed in the
+                    digital world.
+                </p>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <span class="hero-badge">
+                    About TechSmart
+                </span>
+
+                <h2>
+                    Your Partner For Digital Growth
+                </h2>
+
+                <p>
+                    TechSmart is an IT education and digital solutions
+                    company focused on practical technology training
+                    and professional web solutions.
+                </p>
+
+                <p>
+                    Our goal is simple: help students develop
+                    job-ready skills and help businesses use
+                    technology effectively.
+                </p>
+
+                <ul class="check-list">
+                    <li>Industry-focused curriculum</li>
+                    <li>Experienced instructors</li>
+                    <li>Hands-on practical projects</li>
+                    <li>Professional digital solutions</li>
+                    <li>Career-focused learning</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TESTIMONIALS
+    ========================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span>Testimonials</span>
+                <h2>What Our Students Say</h2>
+                <p>
+                    Real experiences from people who learned
+                    and built with TechSmart.
+                </p>
+            </div>
+
+            <div class="testimonial-grid">
+
+                <div class="testimonial">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "The web development course was very practical.
+                        I created several projects and built my first
+                        professional portfolio."
+                    </p>
+
+                    <div class="user">
+                        <div class="avatar">AS</div>
+                        <div>
+                            <strong>Arjun Sharma</strong>
+                            <small>Web Developer</small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "The instructors explained difficult concepts
+                        in a simple way. The projects helped me understand
+                        how real applications are developed."
+                    </p>
+
+                    <div class="user">
+                        <div class="avatar">PR</div>
+                        <div>
+                            <strong>Priya Rao</strong>
+                            <small>Frontend Developer</small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "Excellent training and support. I recommend
+                        TechSmart to anyone who wants to start a career
+                        in technology."
+                    </p>
+
+                    <div class="user">
+                        <div class="avatar">RK</div>
+                        <div>
+                            <strong>Rahul Kumar</strong>
+                            <small>Software Engineer</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRICING
+    ========================== -->
+
+    <section class="section pricing" id="pricing">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span>Learning Plans</span>
+                <h2>Choose Your Plan</h2>
+                <p>
+                    Flexible learning options for different career goals.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+
+                <div class="price-card">
+
+                    <h3>Starter</h3>
+
+                    <div class="big-price">
+                        ₹4,999
+                    </div>
+
+                    <ul>
+                        <li>1 Course</li>
+                        <li>Recorded Classes</li>
+                        <li>Course Certificate</li>
+                        <li>Community Support</li>
+                    </ul>
+
+                    <a href="#contact" class="btn">
+                        Get Started
+                    </a>
+
+                </div>
+
+
+                <div class="price-card featured">
+
+                    <span class="popular">
+                        MOST POPULAR
+                    </span>
+
+                    <h3>Professional</h3>
+
+                    <div class="big-price">
+                        ₹12,999
+                    </div>
+
+                    <ul>
+                        <li>3 Courses</li>
+                        <li>Live Classes</li>
+                        <li>Projects</li>
+                        <li>Mentor Support</li>
+                        <li>Career Guidance</li>
+                    </ul>
+
+                    <a href="#contact" class="btn">
+                        Get Started
+                    </a>
+
+                </div>
+
+
+                <div class="price-card">
+
+                    <h3>Career Pro</h3>
+
+                    <div class="big-price">
+                        ₹24,999
+                    </div>
+
+                    <ul>
+                        <li>Unlimited Courses</li>
+                        <li>Live Classes</li>
+                        <li>Real Projects</li>
+                        <li>1-to-1 Mentorship</li>
+                        <li>Placement Assistance</li>
+                    </ul>
+
+                    <a href="#contact" class="btn">
+                        Get Started
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="section" id="contact">
+
+        <div class="container contact-grid">
+
+            <div class="contact-info">
+
+                <span class="hero-badge">
+                    Get In Touch
+                </span>
+
+                <h2>
+                    Let's Build Something Great
+                </h2>
+
+                <p>
+                    Have a question about our courses or need a
+                    professional website for your business?
+                    Send us a message.
+                </p>
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">📧</div>
+
+                    <div>
+                        <strong>Email</strong>
+                        <span>hr@techsmart.com</span>
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">📞</div>
+
+                    <div>
+                        <strong>Phone</strong>
+                        <span>+91 98765 43210</span>
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">📍</div>
+
+                    <div>
+                        <strong>Office</strong>
+                        <span>M-35, South Extension, New Delhi, India</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form class="contact-form" id="contactForm">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Interested In</label>
+                    <select id="course" required>
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="Web Design">Web Design</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="React Programming">React Programming</option>
+                        <option value="Python Programming">Python Programming</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Write your message..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <div class="footer-logo">
+                        Tech<span>Smart</span>
+                    </div>
+
+                    <p>
+                        IT education and web solutions for
+                        individuals, startups and businesses.
+                    </p>
+                    <div class="contact-item">
+
+                    <div class="contact-icon">📍</div>
+
+                    <div>
+                        <strong>Office</strong>
+                        <span>M-35, South Extension, New Delhi, India</span>
+                    </div>
+
+                </div>
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h4>Courses</h4>
+
+                    <ul>
+                        <li><a href="#courses">Web Development</a></li>
+                        <li><a href="#courses">React</a></li>
+                        <li><a href="#courses">Python</a></li>
+                        <li><a href="#courses">Data Analytics</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h4>Services</h4>
+
+                    <ul>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">E-Commerce</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">IT Consulting</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h4>Company</h4>
+
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home">Back To Top</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+                © 2026 TechSmart IT & Web Solutions.
+                All Rights Reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* Mobile Navigation */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+
+
+        /* Close mobile menu after clicking a link */
+
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+                navLinks.classList.remove("active");
+            });
+
+        });
+
+
+        /* Contact Form */
+
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+
+            alert(
+                "Thank you, " + name +
+                "! Your message has been received."
+            );
+
+            contactForm.reset();
+
+        });
+
+    </script>
+
+</body>
+</html>
