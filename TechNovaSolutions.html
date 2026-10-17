@@ -59,16 +59,7 @@
             text-align: center;
             margin-bottom: 50px;
         }
-	.section-title>span {
-		//display: inline-block;
-            	background: gray;
-            	color: black;
-            	//margin-top:20px;
-            	padding: 8px 14px;
-            	border-radius: 30px;
-            	font-size: 14px;
-            	font-weight: bold;
-        }
+
         .section-title span {
             color: #2563eb;
             font-size: 15px;
@@ -199,8 +190,9 @@
         ========================== */
 
         .hero {
-            min-height: 100vh;
-            margin-top: 30px;
+	    //mine-height:100vh;
+            line-height: 5.4em;
+            margin-top: 25px;
             padding-top: 75px;
             /* display: flex;
             align-items: center; */
@@ -212,18 +204,18 @@
         .hero-content {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
-            gap: 60px;
+            gap: 70px;
             align-items: center;
-            background-image: url("images/person-using-laptop-with-it-solutions-icon-hovering-above-hand.jpeg");
+            background-image: url("images/IT.jpeg");
             background-repeat: no-repeat;
-            background-size: 100%;
+            background-size: cover;
             box-shadow: 5px 5px 5px 4px rgba(128,128,128,0.6);
         }
-
+	
         .hero-text h1 {
             font-size: 58px;
-            line-height: 1.1;
-            color: #0f172a;
+            line-height: 1;
+            color: white;
             margin: 10px 0 20px;
         }
 
@@ -232,28 +224,41 @@
         }
 
         .hero-text p {
-            color: blue;
+            color: white;
             font-size: 18px;
             max-width: 600px;
             margin-bottom: 30px;
         }
         .hero-text a {
             font-size: 15px;
-            margin-bottom:10px;
+            //margin-bottom:10px;
         }
-        .hero-badge {
-            display: inline-block;
-            background: gray;
-            color: black;
-            margin-top:20px;
-            padding: 8px 14px;
+	.hero-text .btn {
+            font-size: 15px;
+	    //padding:10px 10px;
+	    border-radius:20px;
+	    line-height:25px;
+        }
+	.hero-text .btn-outline {
+            font-size: 15px;
+	    //padding:10px 10px;
+	    border-radius:20px;
+        }
+        .hero-text .hero-badge {
+            //display: inline-block;
+		margin-left:5px;
+            padding: 20px 14px;
             border-radius: 30px;
             font-size: 14px;
             font-weight: bold;
+	    min-width: 45px;
+            //height: 30px;
+            background: gray;
+            color: white;
         }
 
         .hero-image {
-            position: relative;
+            //position: relative;
         }
 
         /* .hero-card {
@@ -337,6 +342,7 @@
         .stats {
             background: #0f172a;
             color: white;
+	    margin-top:50px;
             padding: 35px 0;
         }
 
@@ -365,10 +371,7 @@
         .courses {
             background: #f8fafc;
         }
-	.section-title>span{
-		background: gray;
-            	color: black;
-	}
+
         .course-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -404,9 +407,7 @@
             font-size: 27px;
             margin-bottom: 20px;
         }
-	.course-card h3{
-		text-align:center;
-	}
+
         .course-top h3 {
             font-size: 23px;
         }
@@ -689,7 +690,14 @@
             font-size: 38px;
             margin: 10px 0 20px;
         }
-
+	.contact-info span {
+            min-width: 45px;
+            height: 40px;
+            display: inline-block;
+            background: gray;
+            color: white;
+            border-radius: 30px;
+        }
         .contact-info > p {
             color: #64748b;
             margin-bottom: 30px;
@@ -978,9 +986,9 @@
         <div class="container hero-content">
 
             <div class="hero-text">
-                <div class="hero-badge">
+                <span class="hero-badge">
                     🚀 Learn. Build. Grow.
-                </div>
+                </span>
 
                 <h1>
                     Build Your Future With
@@ -1120,8 +1128,8 @@
                 <div class="course-card">
 
                     <div class="course-top">
-                        <!--div class="course-icon">🌐</div-->
-                        <!--img src="images/web-dev.jfif" alt="Web Development"/-->
+                        <div class="course-icon">🌐</div>
+                        <!--img src="images/web-development-icon.jpg" alt="Web Development"/-->
                         <h3>Web Development</h3>
                     </div>
 
@@ -1150,8 +1158,8 @@
                 <div class="course-card">
 
                     <div class="course-top">
-                        <!--div class="course-icon">⚛️</div-->
-                        <!--img src="images/react-programming.jpg" alt="React Programming"/-->
+                        <div class="course-icon">⚛️</div>
+                        <!--img src="images/react-development.png" alt="React Programming"/-->
                         <h3>React Development</h3>
                     </div>
 
@@ -1180,8 +1188,8 @@
                 <div class="course-card">
 
                     <div class="course-top">
-                        <!--div class="course-icon">🐍</div-->
-                        <!--img src="images/python.jpg" alt="Python Programming"/-->
+                        <div class="course-icon">🐍</div>
+                        <!--img src="images/python.jfif" alt="Python Programming"/-->
                         <h3>Python Programming</h3>
                     </div>
 
@@ -1210,7 +1218,7 @@
                 <div class="course-card">
 
                     <div class="course-top">
-                        <!--div class="course-icon">📊</div-->
+                        <div class="course-icon">📊</div>
                         <!--img src="images/da.avif" title="Data Analytics"/-->
                         <h3>Data Analytics</h3>
                     </div>
@@ -1240,8 +1248,8 @@
                 <div class="course-card">
 
                     <div class="course-top">
-                        <!--div class="course-icon">☁️</div-->
-                        <!--img src="images/cloud.jpg" title="Cloud Computing"/-->
+                        <div class="course-icon">☁️</div>
+                        <!--img src="images/cloud.jpg" alt="Cloud Computing"/-->
                         <h3>Cloud Computing</h3>
                     </div>
 
@@ -1270,7 +1278,7 @@
                 <div class="course-card">
 
                     <div class="course-top">
-                        <!--div class="course-icon">🔐</div-->
+                        <div class="course-icon">🔐</div>
                         <!--img src="images/cyber-security.jpg" title="Python Programming"/-->
                         <h3>Cyber Security</h3>
                     </div>
@@ -1751,7 +1759,7 @@
 
                 <div>
                     <div class="footer-logo">
-                        Tech<span>Nova</span>
+                        Tech<span>Smart</span>
                     </div>
 
                     <p>
