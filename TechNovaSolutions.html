@@ -60,9 +60,12 @@
             margin-bottom: 50px;
         }
 
-        .section-title span {
-            color: #2563eb;
+        .section-title>span {
+            color: black;
+	    background-color:gray;
+	    padding:12px;
             font-size: 15px;
+	    border-radius:30px;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -125,9 +128,12 @@
         }
 
         .navbar {
+	    width:100%;
             height: 80px;
             display: flex;
+	    //gap:100px;
             align-items: center;
+	    justify-content:space-around;
         }
 
         .logo {
@@ -152,9 +158,7 @@
         .nav-links {
             display: flex;
             gap: 20px;
-            margin-left:20px;
-            align-items: center;
-            justify-content: space-between;
+            //align-items: center;
         }
 
         .nav-links a {
@@ -168,17 +172,16 @@
             color:blue;/*color: #2563eb;*/
         }
 
-        .menu-btn {
+        .navbar .menu-btn {
             /*display: none;*/
             /*font-size: 20px;
             font-weight:600px;
-            /*cursor: pointer;
             color: #0f172a;*/
-            /* background: #172554; */
-            /* background-color: blue; */
+	    //float:right;
+	    display:inline-block;
             background-color: #2563eb;
             color: white;
-            margin-left:50px;
+            //margin-left:50px;
             padding: 10px 20px;
             border-radius: 6px;
             font-weight: bold;
@@ -205,10 +208,11 @@
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
             gap: 70px;
+	    background-color:gray;
             align-items: center;
             background-image: url("images/IT.jpeg");
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             box-shadow: 5px 5px 5px 4px rgba(128,128,128,0.6);
         }
 	
@@ -244,7 +248,18 @@
 	    //padding:10px 10px;
 	    border-radius:20px;
         }
-        .hero-text .hero-badge {
+	.contact-info .hero-badge {
+            //display: inline-block;
+            padding: 10px 14px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+	    min-width: 45px;
+            //height: 30px;
+            background: gray;
+            color: black;
+        }
+        .hero-badge {
             //display: inline-block;
 		margin-left:5px;
             padding: 20px 14px;
@@ -254,7 +269,7 @@
 	    min-width: 45px;
             //height: 30px;
             background: gray;
-            color: white;
+            color: black;
         }
 
         .hero-image {
@@ -690,7 +705,7 @@
             font-size: 38px;
             margin: 10px 0 20px;
         }
-	.contact-info span {
+	.contact-info>span {
             min-width: 45px;
             height: 40px;
             display: inline-block;
@@ -724,7 +739,8 @@
         }
 
         .contact-item span {
-            color: #64748b;
+            color: black;
+	    padding:8px 10px;
         }
 
         .contact-form {
@@ -969,7 +985,6 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-
             <div class="menu-btn" id="menuBtn">
                 <a href="#courses">Explore Courses</a><!--☰-->
             </div>
@@ -1663,7 +1678,7 @@
 
                     <div>
                         <strong>Email</strong>
-                        <span>hr@TechNova.com</span>
+                        <span>hr@TechNovaSolutions.in</span>
                     </div>
 
                 </div>
@@ -1703,7 +1718,14 @@
                         placeholder="Enter your name"
                         required>
                 </div>
-
+		<div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="number"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                        required min="10" max="10">
+                </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input
