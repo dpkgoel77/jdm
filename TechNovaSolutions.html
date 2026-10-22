@@ -1164,7 +1164,12 @@
 
                     <div class="course-footer">
                         <span class="price">₹9,999</span>
-                        <a href="#contact" class="btn">Enroll</a>
+                        <!--a href="#contact" class="btn">Enroll</a-->
+			<a href="#contact"
+       				class="btn"
+       				onclick="selectCourse('Web Development')">
+        			Enroll
+    			</a>
                     </div>
 
                 </div>
@@ -1194,7 +1199,12 @@
 
                     <div class="course-footer">
                         <span class="price">₹14,999</span>
-                        <a href="#contact" class="btn">Enroll</a>
+                        <!--a href="#contact" class="btn">Enroll</a-->
+			<a href="#contact"
+       				class="btn"
+       				onclick="selectCourse('React Development')">
+        			Enroll
+    			</a>
                     </div>
 
                 </div>
@@ -1224,7 +1234,12 @@
 
                     <div class="course-footer">
                         <span class="price">₹11,999</span>
-                        <a href="#contact" class="btn">Enroll</a>
+                        <!--a href="#contact" class="btn">Enroll</a-->
+			<a href="#contact"
+       				class="btn"
+       				onclick="selectCourse('Python Programming')">
+        			Enroll
+    			</a>
                     </div>
 
                 </div>
@@ -1254,7 +1269,12 @@
 
                     <div class="course-footer">
                         <span class="price">₹12,999</span>
-                        <a href="#contact" class="btn">Enroll</a>
+                        <!--a href="#contact" class="btn">Enroll</a-->
+			<a href="#contact"
+       				class="btn"
+       				onclick="selectCourse('Data Analytics')">
+        			Enroll
+    			</a>
                     </div>
 
                 </div>
@@ -1284,7 +1304,12 @@
 
                     <div class="course-footer">
                         <span class="price">₹15,999</span>
-                        <a href="#contact" class="btn">Enroll</a>
+                        <!--a href="#contact" class="btn">Enroll</a-->
+			<a href="#contact"
+       				class="btn"
+       				onclick="selectCourse('Cloud Computing')">
+        			Enroll
+    			</a>
                     </div>
 
                 </div>
@@ -1314,7 +1339,12 @@
 
                     <div class="course-footer">
                         <span class="price">₹17,999</span>
-                        <a href="#contact" class="btn">Enroll</a>
+                        <!--a href="#contact" class="btn">Enroll</a-->
+			<a href="#contact"
+       				class="btn"
+       				onclick="selectCourse('Cyber Security')">
+        			Enroll
+    			</a>
                     </div>
 
                 </div>
@@ -1890,6 +1920,12 @@
             contactForm.reset();
 
         });
+	function selectCourse(courseName) {
+        	// Get the course dropdown
+        	const courseDropdown = document.getElementById("course");
+        	// Select the matching course
+        	courseDropdown.value = courseName;
+    	}
 
     </script>
 
